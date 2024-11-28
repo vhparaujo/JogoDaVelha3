@@ -21,6 +21,7 @@ struct MPPeersView: View {
             Button(String(localized: "select")) {
               game.gameType = .peer
               connectionManager.nearbyServiceBrowser.invitePeer(peer, to: connectionManager.session, withContext: nil, timeout: 30)
+                
               game.player1.name = connectionManager.myPeerId.displayName
               game.player2.name = peer.displayName
             }
